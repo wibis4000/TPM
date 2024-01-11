@@ -19,11 +19,14 @@
 
   <div class="Small-container">
     <h1>Sign Up</h1>
-    <form>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
+    <form action="{{route('signup')}}" method="POST">
+      @csrf
+      <label for="groupName">Group Name:</label>
+      <input type="text" id="" name="groupName" required>
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="" name="password" required>
+      <label for="campus">Campus:</label>
+      <input type="text" id="" name="campus" required>
       <input type="submit" value="Sign Up"><form id="multi-step-form">
 
        

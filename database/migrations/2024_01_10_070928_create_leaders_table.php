@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('whatsapp');
             $table->string('lineId');
-            $table->string('GitId');
+            $table->string('gitId');
             $table->string('birthPlace');
             $table->date('birthDate');
             $table->string('cv');
