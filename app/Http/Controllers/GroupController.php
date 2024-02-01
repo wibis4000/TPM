@@ -10,6 +10,18 @@ class GroupController extends Controller
     public function register(){
         return view('register');
     }
+    public function register_2(){
+        return view('register_2');
+    }
+    public function register_3(){
+        return view('register_3');
+    }
+    public function register_4(){
+        return view('register_4');
+    }
+    public function register_5(){
+        return view('register_5');
+    }
     public function signup(Request $request){
         $request->validate([
             'groupName' => 'required',

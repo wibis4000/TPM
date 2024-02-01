@@ -86,21 +86,8 @@ input[type="submit"]:hover {
 
 /*  */
 
-/* Password visibility toggle */
-.password-input {
-  position: relative;
-  margin-bottom: 15px;
-}
 
-.toggle-password {
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #555;
-  font-size: 14px;
-}
+
 
 /* Binusian selection */
 label[for="binusian"],
@@ -123,21 +110,8 @@ input[type="button"]:hover {
   background-color: #450062;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-/* Add this for Confirm Password toggle */
-.password-input {
-  position: relative;
-  margin-bottom: 15px;
-}
 
-.toggle-password {
-  position: absolute;
-  top: 50%;
-  right: 5px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #555;
-  font-size: 14px;
-}
+
 
 
 /* Your existing CSS styles */
@@ -167,10 +141,10 @@ input[type="button"]:hover {
 }
 
 
-/* Styling for the "Nama Kelompok," "Password," and "Confirm Password" elements */
-label[for="username"],
-label[for="password"],
-label[for="confirmPassword"] {
+/* Styling for the "Nama Kelompok," "Tempat Lahir," and "Tanggal Lahir" elements */
+label[for="Nama_Kelompok"],
+label[for="Tempat_Lahir"],
+label[for="Tanggal_Lahir"] {
   color: rgb(18, 17, 17); 
   font-size: 15px; 
   text-align: left; /* Align the text to the left */
@@ -178,23 +152,22 @@ label[for="confirmPassword"] {
   width: 100%; 
 }
 
-input#username,
-input#password,
-input#confirmPassword {
+input#Nama_Kelompok,
+input#TempatLahir,
+input#TanggalLahir {
   border: 2px solid #000000; /* Example border for the input fields */
   border-radius: 5px; /* Example border radius for the input fields */
   color: #100b0b; /* Example text color for the input fields */
   background-color: #9747FF; /* Example background color for the input fields */
-  padding: 8px; /* Example padding for the input fields */
+  padding: 6px; /* Adjusted padding for the input fields */
   /* Add any other desired styles */
 }
 
-
 /* Styling for Binusian and Non-Binusian buttons */
 
-/* Styling for Binusian and Non-Binusian buttons */
-#binusian,
-#nonBinusian {
+/* Styling for Laki-Laki and Perempuan buttons */
+#laki-laki,
+#perempuan {
   border: none;
   background-color: transparent;
   padding: 0;
@@ -202,8 +175,8 @@ input#confirmPassword {
   align-items: center;
 }
 
-#binusian:before,
-#nonBinusian:before {
+#laki-laki:before,
+#perempuan:before {
   content: '';
   display: inline-block;
   width: 10px; /* Adjust as needed */
@@ -213,22 +186,20 @@ input#confirmPassword {
   border-radius: 50%; /* To create a circle */
 }
 
-#binusian {
+#laki-laki {
   color: hsl(0, 0%, 100%);
   margin-right: 10px; /* Adjust to separate buttons */
 }
 
-#nonBinusian {
+#perempuan {
   color: #f9f8f8;
-  margin-left: calc(10px + 150px); /* Calculate the total margin to match Binusian */
+  margin-left: calc(10px + 150px); /* Calculate the total margin to match Laki-Laki */
   margin-top: -24px; /* Adjust the vertical position */
-
 }
 
-
 /* Example background color for the button text */
-#binusian span,
-#nonBinusian span {
+#laki-laki span,
+#perempuan span {
   background-color: #9747FF;
   padding: 5px 0px; /* Adjust as needed */
   border-radius: 10px; /* Example border radius */
@@ -243,27 +214,28 @@ input#confirmPassword {
 /* Rest of your existing CSS */
 
 
+
 /* Styling for the "Next" button */
+/* Styling for the navigation buttons */
+/* Styling for the navigation buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+
+/* Styling for the "Next" and "Back" buttons */
 input[type="button"] {
   border: none;
   background-color: #9747FF;
   padding: 10px 20px;
   color: hsl(0, 0%, 100%);
-  margin-top: 10px; /* Adjust the margin to your preference */
-  border-radius: 20px; /* Adjust the border-radius to create an oval shape */
+  border-radius: 20px;
   cursor: pointer;
-  text-align: center; /* Center the text horizontally */
-  position: relative; /* Add relative positioning */
-}
-
-input[type="button"]:before {
-  content: '';
-  display: inline-block;
-  width: 10px; /* Adjust as needed */
-  height: 10px; /* Adjust as needed */
-  margin-right: 10px; /* Adjust as needed */
-  border: 2px solid #000000; /* Example border for the icon */
-  border-radius: 50%; /* To create a circle */
+  text-align: center;
+  position: relative;
+  margin-right: 10px; /* Adjust the margin between the buttons */
 }
 
 /* Add this line for the black underline */
@@ -271,12 +243,16 @@ input[type="button"]:after {
   content: '';
   display: block;
   height: 2px;
-  width: 100%;
-  background-color: #000; /* Black color for the underline */
+  width: 50%;
+  background-color: #000;
   position: absolute;
   bottom: 0;
   left: 0;
 }
+
+/* Add any other styling you need for the buttons */
+
+
 
 
  /* Add this to your CSS for resizing the image with animation */
