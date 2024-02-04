@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use App\Models\Register;
 
 class Wizard extends Component
@@ -74,13 +75,26 @@ class Wizard extends Component
      *
      * @return response()
      */
+    use WithFileUploads;
+
+ 
+    public function save()
+    {
+        $this->validate([
+            'cv' => 'required',
+            'flazz' => 'required',
+        ]);
+ 
+        $this->cv->store('cv');
+        $this->flazz->store('flazz');
+    }
     public function fourthStepSubmit()
     {
         $validatedData = $this->validate([
             'cv' => 'required',
             'flazz' => 'required',
         ]);
-  
+       
         $this->currentStep = 5;
     }
   
@@ -112,6 +126,7 @@ class Wizard extends Component
         $this->clearForm();
   
         $this->currentStep = 1;
+        return redirect()->route('homepage');
     }
   
     /**

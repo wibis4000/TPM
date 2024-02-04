@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #232859;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #7a01a5;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar a, .navbar button {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar button {
+    background-color: #C24FB3;
+    border: none;
+    border-radius: 25px;
+    font-size: large;
+}
+
+.navbar .right-items {
+    display: flex;
+    gap: 10px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative  ;
+    top: 110px;
+    left: 200px;
+}
+
+.left {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left a {
+    color: white;
+}
+
+#log {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+input {
+    border: none;
+    border-radius: 10px;
+    width: 500px;
+    height: 50px;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+}
+
+input::placeholder {
+    padding-left: 15px;
+}
+
+.left a {
+    position: relative;
+    bottom: 115px;
+    left: 365px;
+}
+
+.left button {
+    background-color: #1170ff;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 180px;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    text-align: center;
+    margin: 30px;
+    position: relative;
+    top: 20px;
+    left: 128px;
+}
+
+.right img {
+    max-width: 100%;
+    position: relative;
+    right: 400px;
+}
+
+.bottom {
+    font-family: 'Poppins', sans-serif;
+}
+
+.bottom h2 {
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    font-weight: 300;
+}
+
+.bottom a {
+    position: absolute;
+    bottom: 35px;
+    left: 54%;
+}
+
+.bottom h2, .bottom a {
+    color: white;
+    text-decoration: none;
+}

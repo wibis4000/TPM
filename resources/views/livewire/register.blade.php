@@ -57,77 +57,68 @@
     </div>
     <div class="row setup-content {{ $currentStep != 2 ? 'displayNone' : '' }}" id="step-2">
         <h1> Step 2</h1>
-        <form id="multi-step-form">
-            <label for="Nama_kelompok">Nama Ketua Kelompok:</label>
-            <input type="text" id="Nama_Kelompok" wire:model="namaKetua" />
-            @error('namaKetua') <span class="error">{{ $message }}</span> @enderror
-
-            <div class="Tempat_Lahir">
-                <label for="Tempat_Lahir">Tempat Lahir:</label>
-                <input type="text" wire:model="tempatLahir"  id="TempatLahir"/>
-                @error('tempatLahir') <span class="error">{{ $message }}</span> @enderror
-            </div>
-            <div class="Tanggal Lahir">
-                <label for="Tanggal_Lahir">Tanggal Lahir:</label>    
-                <input type="text" wire:model="tanggalLahir"  id="TanggalLahir"/>
-                @error('tanggalLahir') <span class="error">{{ $message }}</span> @enderror
-            </div>
-            <div class="form-group">
-                <div class="gender-options">
-                    <label for="gender-options">Gender</label><br/>
-                    <label id="laki-laki" class="radio-inline"><input type="radio" wire:model="gender" value="Pria" {{{ $gender == 'Pria' ? "checked" : "" }}}> Pria</label>
-                    <label id="perempuan"class="radio-inline"><input type="radio" wire:model="gender" value="Wanita" {{{ $gender == 'Wanita' ? "checked" : "" }}}> Wanita</label>
-                    @error('gender') <span class="error">{{ $message }}</span> @enderror
+            <form id="multi-step-form">
+                <label for="username">Nama Ketua:</label>
+                <input type="text" wire:model="namaKetua"  id="namaKetua">
+                @error('namaKetua') <span class="error">{{ $message }}</span> @enderror
+                
+                <label for="description">Tempat Lahir:</label>
+                <div class="password-input">
+                    <input type="password" wire:model="tempatLahir"  id="tempatLahir"/>
+                    @error('tempatLahir') <span class="error">{{ $message }}</span> @enderror
                 </div>
-            <div>
-        </form>
-            <div class="navigation-buttons">
-                <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(1)">Back</button>
-                <button class="btn btn-primary nextBtn btn-lg pull-right" wire:click="secondStepSubmit" type="button">Next</button>    
-            </div>
+                <label for="description">Tanggal Lahir:</label>
+                <div class="password-input">
+                    <input type="password" wire:model="tanggalLahir" id="tanggalLahir"></textarea>
+                    @error('tanggalLahir') <span class="error">{{ $message }}</span> @enderror
+                </div>
+                    <div class="gender-option">
+                        <label id="perempuan" class="radio-inline"><input type="radio" wire:model="gender" value="perempuan" {{{ $campus == 'perempuan' ? "checked" : "" }}}> Perempuan </label>
+                        <label id="laki-laki"class="radio-inline"><input type="radio" wire:model="gender" value="laki-laki" {{{ $campus == 'Laki-laki' ? "checked" : "" }}}> Laki-laki </label>
+                        @error('gender') <span class="error">{{ $message }}</span> @enderror
+                    </div>
+                <button class="btn btn-primary nextBtn btn-lg pull-right" wire:click="secondStepSubmit" type="button" >Next</button>
+                <p style="color: white; margin-top: 10px;">Sudah memiliki akun? <a href="#" class="login-link">Login Disini</a></p>
+            </form>
     </div>
     <div class="row setup-content {{ $currentStep != 3 ? 'displayNone' : '' }}" id="step-3">
         <h1> Step 3</h1>
-        <form id="multi-step-form">
-            <label for="Whatsapp">whatsapp:</label>
-            <input type="text" wire:model="whatsapp"  id="Whatsapp"/>
-            @error('whatsapp') <span class="error">{{ $message }}</span> @enderror
-
-            <div class="LineID">
-                <label for="LineID">Line ID</label>
-                <input type="text" wire:model="lineID"  id="LineID"/>
-                @error('lineID') <span class="error">{{ $message }}</span> @enderror
-            </div>
-            <div class="GithubID">
-                <label for="GithubID">GIT ID</label>
-                <input type="text" wire:model="gitID"  id="GithubID"/>
-                @error('gitID') <span class="error">{{ $message }}</span> @enderror
-            </div>
-        </form>
-            <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(2)">Back</button>
-            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" wire:click="thirdStepSubmit">Next</button>
-
+            <form id="multi-step-form">
+                <label for="username">Whatsapp:</label>
+                <input type="text" wire:model="whatsapp"  id="whatsapp">
+                @error('whatsapp') <span class="error">{{ $message }}</span> @enderror
+                
+                <label for="description">line ID:</label>
+                <div class="password-input">
+                    <input type="password" wire:model="lineID"  id="lineID"/>
+                    @error('lineID') <span class="error">{{ $message }}</span> @enderror
+                </div>
+                <label for="description">gitID:</label>
+                <div class="password-input">
+                    <input type="password" wire:model="gitID" id="gitID"></textarea>
+                    @error('gitID') <span class="error">{{ $message }}</span> @enderror
+                </div>
+                <button class="btn btn-primary nextBtn btn-lg pull-right" wire:click="thirdStepSubmit" type="button" >Next</button>
+                <p style="color: white; margin-top: 10px;">Sudah memiliki akun? <a href="#" class="login-link">Login Disini</a></p>
+            </form>
     </div>
     <div class="row setup-content {{ $currentStep != 4 ? 'displayNone' : '' }}" id="step-4">
-        <h3> Step 4</h3>
-        <form id="multi-step-form">
-            <label for="CV">Cv:</label>
-            <input type="file" wire:model="cv"  id="CV" accept=".pdf, .jpg, .jpeg, .png"/>
-            @error('cv') <span class="error">{{ $message }}</span> @enderror
-
-            <label for="FlazzCard">Flazz Card</label>
-            <input type="file" wire:model="flazz"  id="FlazzCard" accept=".pdf, .jpg, .jpeg, .png"/>
-            @error('flazz') <span class="error">{{ $message }}</span> @enderror
-        </form>  
-        <div class="navigation-buttons">
-            <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" wire:click="submitForm">Next</button>
-            <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(3)">Back</button>
-        </div>
+        <h1> Step 4</h1>
+            <form id="multi-step-form" wire:submit.prevent="save">
+                <label for="CV">CV (PDF, JPG, JPEG, PNG)</label>
+                <input type="file" id="CV" wire:model="cv" accept=".pdf, .jpg, .jpeg, .png" required>
+                @error('cv') <span class="error">{{ $message }}</span> @enderror
+                <label for="FlazzCard">Flazz Card (PDF, JPG, JPEG, PNG) - For Binusian</label>
+                <input type="file" id="FlazzCard" wire:model="flazz" accept=".pdf, .jpg, .jpeg, .png">
+                    @error('flazz') <span class="error">{{ $message }}</span> @enderror
+                <button class="btn btn-primary nextBtn btn-lg pull-right" wire:click="fourthStepSubmit" type="button" >Next</button>
+                <p style="color: white; margin-top: 10px;">Sudah memiliki akun? <a href="#" class="login-link">Login Disini</a></p>
+            </form>
     </div>
     <div class="row setup-content {{ $currentStep != 5 ? 'displayNone' : '' }}" id="step-5">
             <h3>Selesai</h3>
         
-            <button class="btn btn-success btn-lg pull-right" wire:click="welcome" type="button">Finish!</button>
+            <button class="btn btn-success btn-lg pull-right" wire:click="submitForm" type="button">Finish!</button>
             <button class="btn btn-danger nextBtn btn-lg pull-right" type="button" wire:click="back(4)">Back</button>
     </div>
 </div>

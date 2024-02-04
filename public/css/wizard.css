@@ -293,14 +293,33 @@ body {
     padding: 5px 0px; /* Adjust as needed */
     border-radius: 10px; /* Example border radius */
   }
+  /* Styling for the "Nama Kelompok," "Tempat Lahir," and "Tanggal Lahir" elements */
+  label[for="CV"],
+  label[for="FlazzCard"],
+  label[for=""] {
+    color: rgb(18, 17, 17); 
+    font-size: 15px; 
+    text-align: left; /* Align the text to the left */
+    display: block; /* Ensure labels display as blocks to align to the left */
+    width: 100%; 
+  }
   
+  input#CV,
+  input#FlazzCard,
+  input#GithubID {
+    border: 2px solid #000000; /* Example border for the input fields */
+    border-radius: 5px; /* Example border radius for the input fields */
+    color: #100b0b; /* Example text color for the input fields */
+    background-color: #9747FF; /* Example background color for the input fields */
+    padding: 6px; /* Adjusted padding for the input fields */
+    /* Add any other desired styles */
+  }
   /* Styling for selected option */
   .selected {
     background-color: #450062; /* Example color for the selected button */
     color: #fff; /* Example color for text on the selected button */
   }
-  
-  /* Rest of your existing CSS */
+
   
   
   /* Styling for the "Next" button */
@@ -388,212 +407,5 @@ body {
     background-color: #450062; /* Example color for the selected button */
     color: #fff; /* Example color for text on the selected button */
   }
-  
-  
-  /* Styling for the "Nama Kelompok," "Tempat Lahir," and "Tanggal Lahir" elements */
-  label[for="Nama_Kelompok"],
-  label[for="Tempat_Lahir"],
-  label[for="Tanggal_Lahir"] {
-    color: rgb(18, 17, 17); 
-    font-size: 15px; 
-    text-align: left; /* Align the text to the left */
-    display: block; /* Ensure labels display as blocks to align to the left */
-    width: 100%; 
-  }
-  
-  input#Nama_Kelompok,
-  input#TempatLahir,
-  input#TanggalLahir {
-    border: 2px solid #000000; /* Example border for the input fields */
-    border-radius: 5px; /* Example border radius for the input fields */
-    color: #100b0b; /* Example text color for the input fields */
-    background-color: #9747FF; /* Example background color for the input fields */
-    padding: 6px; /* Adjusted padding for the input fields */
-    /* Add any other desired styles */
-  }
-  
-  /* Styling for Binusian and Non-Binusian buttons */
-  
-  /* Styling for Laki-Laki and Perempuan buttons */
-  #laki-laki,
-  #perempuan {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  #laki-laki:before,
-  #perempuan:before {
-    content: '';
-    display: inline-block;
-    width: 10px; /* Adjust as needed */
-    height: 10px; /* Adjust as needed */
-    margin-right: 10px; /* Adjust as needed */
-    border: 2px solid #000000; /* Example border for the icon */
-    border-radius: 50%; /* To create a circle */
-  }
-  
-  #laki-laki {
-    color: hsl(0, 0%, 100%);
-    margin-right: 10px; /* Adjust to separate buttons */
-  }
-  
-  #perempuan {
-    color: #f9f8f8;
-    margin-left: calc(10px + 150px); /* Calculate the total margin to match Laki-Laki */
-    margin-top: -24px; /* Adjust the vertical position */
-  }
-  
-  /* Example background color for the button text */
-  #laki-laki span,
-  #perempuan span {
-    background-color: #9747FF;
-    padding: 5px 0px; /* Adjust as needed */
-    border-radius: 10px; /* Example border radius */
-  }
-  
-  /* Styling for selected option */
-  .selected {
-    background-color: #450062; /* Example color for the selected button */
-    color: #fff; /* Example color for text on the selected button */
-  }
-  
-  /* Rest of your existing CSS */
-  
-  
-  
-  /* Styling for the "Next" button */
-  /* Styling for the navigation buttons */
-  /* Styling for the navigation buttons */
-  .navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 85%;
-    margin-top: 20px; /* Adjust the margin as needed */
-  }
-  
-  /* Styling for the "Next" and "Back" buttons */
-  input[type="button"] {
-    border: none;
-    background-color: #9747FF;
-    padding: 10px 20px;
-    color: hsl(0, 0%, 100%);
-    border-radius: 20px;
-    cursor: pointer;
-    text-align: center;
-    position: relative;
-    margin-right: 10px; /* Adjust the margin between the buttons */
-  }
-  
-  /* Add this line for the black underline */
-  input[type="button"]:after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 50%;
-    background-color: #000;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  
-  /* Styling for the "Nama Kelompok," "Tempat Lahir," and "Tanggal Lahir" elements */
-  label[for="Whatssapp"],
-  label[for="LineID"],
-  label[for="GithubID"] {
-    color: rgb(18, 17, 17); 
-    font-size: 15px; 
-    text-align: left; /* Align the text to the left */
-    display: block; /* Ensure labels display as blocks to align to the left */
-    width: 100%; 
-  }
-  
-  input#Whatssapp,
-  input#LineID,
-  input#GithubID {
-    border: 2px solid #000000; /* Example border for the input fields */
-    border-radius: 5px; /* Example border radius for the input fields */
-    color: #100b0b; /* Example text color for the input fields */
-    background-color: #9747FF; /* Example background color for the input fields */
-    padding: 6px; /* Adjusted padding for the input fields */
-    /* Add any other desired styles */
-  }
-  
-  /* Styling for Binusian and Non-Binusian buttons */
-  
-  /* Styling for Laki-Laki and Perempuan buttons */
-  #laki-laki,
-  #perempuan {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  #laki-laki:before,
-  #perempuan:before {
-    content: '';
-    display: inline-block;
-    width: 10px; /* Adjust as needed */
-    height: 10px; /* Adjust as needed */
-    margin-right: 10px; /* Adjust as needed */
-    border: 2px solid #000000; /* Example border for the icon */
-    border-radius: 50%; /* To create a circle */
-  }
-  
-  #laki-laki {
-    color: hsl(0, 0%, 100%);
-    margin-right: 10px; /* Adjust to separate buttons */
-  }
-  
-  #perempuan {
-    color: #f9f8f8;
-    margin-left: calc(10px + 150px); /* Calculate the total margin to match Laki-Laki */
-    margin-top: -24px; /* Adjust the vertical position */
-  }
-  
-  /* Example background color for the button text */
-  #laki-laki span,
-  #perempuan span {
-    background-color: #9747FF;
-    padding: 5px 0px; /* Adjust as needed */
-    border-radius: 10px; /* Example border radius */
-  }
-  
-  /* Styling for selected option */
-  .selected {
-    background-color: #450062; /* Example color for the selected button */
-    color: #fff; /* Example color for text on the selected button */
-  }
-  
-    /* Styling for the "Nama Kelompok," "Tempat Lahir," and "Tanggal Lahir" elements */
-    label[for="CV"],
-    label[for="FlazzCard"],
-    label[for=""] {
-      color: rgb(18, 17, 17); 
-      font-size: 15px; 
-      text-align: left; /* Align the text to the left */
-      display: block; /* Ensure labels display as blocks to align to the left */
-      width: 100%; 
-    }
-    
-    input#CV,
-    input#FlazzCard,
-    input#GithubID {
-      border: 2px solid #000000; /* Example border for the input fields */
-      border-radius: 5px; /* Example border radius for the input fields */
-      color: #100b0b; /* Example text color for the input fields */
-      background-color: #9747FF; /* Example background color for the input fields */
-      padding: 6px; /* Adjusted padding for the input fields */
-      /* Add any other desired styles */
-    }
-    
-  /* Rest of your existing CSS */
-  
-  
-  
   
   
