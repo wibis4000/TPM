@@ -1,6 +1,6 @@
-function submitForm() {
-    var form = document.getElementById("myForm");
-    form.submit(); 
+function submitLog() {
+  var form = document.getElementById("myForm");
+  form.submit(); 
 
-    window.location.href = "{{route('homepage')}}";
-  }
+  window.location.href = "../dashboard";
+}

@@ -1,4 +1,4 @@
-function submitForm() {
+function submitLog() {
     // Code to send form data to the server
     // You can use AJAX or fetch for this purpose
 

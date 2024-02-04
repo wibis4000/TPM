@@ -152,4 +152,5 @@ class Wizard extends Component
         $this->stock = '';
         $this->status = 1;
     }
+    
 }

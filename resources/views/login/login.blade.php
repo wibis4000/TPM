@@ -42,7 +42,7 @@
                 <br>
             
                 
-                <button type="button" onclick="submitForm()">Log in</button>
+                <button type="button" onclick="submitLog()">Log in</button>
               </form>
             
             <a href="forgotpass.html">Forgot Password?</a>
