@@ -11,7 +11,7 @@ class Wizard extends Component
     public $currentStep = 1;
     public $groupName, $password, $confirmPassword, $campus, $namaKetua,$tempatLahir,$tanggalLahir,$gender,$whatsapp,$lineID,$gitID,$cv,$flazz;
     public $successMessage = '';
-  
+    
     /**
      * Write code on Method
      *

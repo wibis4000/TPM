@@ -30,9 +30,13 @@
             <img id="welcome" src="{{ asset('asset/Welcome.png') }}" alt="Welcome">
             <br>
             <img id="log" src="{{ asset('asset/Log back in.png') }}" alt="Log back in">
-            
-            <form id="myForm" action="https://example.com/form-handler" method="post">
-                
+            @if(session('error'))
+            <div class="alert alert-danger">
+                <b>Opps!</b> {{session('error')}}
+            </div>
+            @endif
+            <form id="myForm" action="{{ route('actionlogin') }}" method="post">
+                @csrf
                 <input type="text" id="groupName" name="groupName" required placeholder="Your Team Name..">
                 
                 <br>
@@ -42,7 +46,7 @@
                 <br>
             
                 
-                <button type="button" onclick="submitLog()">Log in</button>
+                <button type="submit">Log in</button>
               </form>
             
             <a href="forgotpass.html">Forgot Password?</a>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,10 @@ Route::get('/signup', function () {
 })->name('signup');
 Route::get('/homepage', [RegisterController::class,'homepage'])->name('homepage');
 Route::get('/login', [RegisterController::class,'login'])->name('login');
+Route::get('/admin', [RegisterController::class,'admin'])->name('admin');
+Route::get('/admin2', [RegisterController::class,'admin2'])->name('admin2');
 Route::get('/dashboard', [RegisterController::class,'dashboard'])->name('dashboard');
 Route::get('/contact', [RegisterController::class,'contact'])->name('contact');
 Route::get('/timeline', [RegisterController::class,'timeline'])->name('timeline');
+Route::get('actionlogout', [LoginController::class, 'actionlogout'])->name('actionlogout')->middleware('auth');
+Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');

@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('cv')->nullable();
             $table->string('flazz')->nullable();
             $table->timestamps();
+            
         });
     }
     /**

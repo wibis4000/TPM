@@ -7,6 +7,7 @@ use App\Models\Register;
 
 class RegisterController extends Controller
 {
+    
     public function homepage(){
         return view('homepage');
     }
@@ -21,5 +22,11 @@ class RegisterController extends Controller
     }
     public function timeline(){
         return view('login/timeline');
+    }
+    public function admin(){
+        return view('admin');
+    }
+    public function admin2(){
+        return view('admin2');
     }
 }
